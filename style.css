@@ -265,19 +265,21 @@
                 }
                 
                 .bg-2 {
-                    background-image: url('Img/AFFICHE_MISSION-ORGANE_A3_A_V4.jpg');
+                    background-image: url('Img/Organ1.jpg');
+                    /*url('Img/AFFICHE_MISSION-ORGANE_A3_A_V4.jpg');*/
                     background-position: bottom center;
                 }
                 
                 .bg-3 {
-                    background-image: url('Img/AFFICHE_ROUTINE_A3 - origin - police.jpg');
+                    /*background-image: url('Img/AFFICHE_ROUTINE_A3 - origin - police.jpg');*/
+                    background-color: #f4941f;
                     background-position: center center;
                     background-position-y: -900px;
                     background-repeat: repeat;
                 }
                 
                 .bg-4 {
-                    background-image: url('Img/AFFICHE_ISSUE_SECOURS_V1.jpg');
+                    background-image: url('Img/IssueBack5.png');
                 }
                 
                 .fixed-bg h1 {
@@ -1265,4 +1267,34 @@
                 .cop {
                     width: 80%;
                     padding-top: 4rem;
+                }
+                
+                .titreissue {
+                    width: 50%;
+                }
+                
+                .titreroutine {
+                    width: 25%;
+                }
+                
+                .titreorgane {
+                    width: 40%;
+                    padding-bottom: 1rem;
+                }
+                
+                .ptitreroutine {
+                    color: black;
+                }
+                
+                @media (max-width:992px) {
+                    .titreroutine {
+                        width: 40%;
+                    }
+                    .titreissue {
+                        width: 70%;
+                    }
+                    .titreorgane {
+                        width: 60%;
+                        padding-bottom: 1rem;
+                    }
                 }
