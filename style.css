@@ -271,11 +271,11 @@
                 }
                 
                 .bg-3 {
-                    /*background-image: url('Img/AFFICHE_ROUTINE_A3 - origin - police.jpg');*/
-                    background-color: #f4941f;
-                    background-position: center center;
+                    /*background-image: url('Img/AFFICHE_ROUTINE_A3 - origin - police.jpg');
+                       background-position: center center;
                     background-position-y: -900px;
-                    background-repeat: repeat;
+                    background-repeat: repeat;*/
+                    background-color: #f4941f;
                 }
                 
                 .bg-4 {
@@ -468,28 +468,6 @@
                 
                 .flicker-fast {
                     animation: flicker 1s linear 10;
-                }
-                
-                @keyframes flicker {
-                    0%,
-                    19.999%,
-                    22%,
-                    62.999%,
-                    64%,
-                    64.999%,
-                    70%,
-                    100% {
-                        //text-shadow: none;
-                        opacity: .99;
-                    }
-                    20%,
-                    21.999%,
-                    63%,
-                    63.999%,
-                    65%,
-                    69.999% {
-                        opacity: 0.4;
-                    }
                 }
                 
                 .subtitle-issue {
@@ -773,8 +751,6 @@
                 i.grow:hover {
                     transform: scale(1.5);
                 }
-                
-                .iconLink:hover {}
                 
                 .gue-p {
                     text-align: justify;
@@ -1149,13 +1125,6 @@
                     width: 60%;
                 }
                 
-                .scrollcontainer {}
-                
-                .secscroll {
-                    scroll-snap-align: start;
-                    scroll-snap-stop: always;
-                }
-                
                 #cf {
                     position: relative;
                     top: -30vh;
@@ -1184,30 +1153,30 @@
                     letter-spacing: 0.8rem;
                 }
                 /* automatic switch of images 
-@keyframes cfFadeInOut {
-    0% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 1;
-    }
-    55% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+                    @keyframes cfFadeInOut {
+                    0% {
+                    opacity: 1;
+                    }
+                    45% {
+                    opacity: 1;
+                    }
+                    55% {
+                    opacity: 0;
+                    }
+                    100% {
+                    opacity: 0;
+                    }
+                    }
 
-#cf img.top {
-    animation-name: cfFadeInOut;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-    animation-direction: alternate;
-    animation-iteration-count: 1;
-}
-*/
+                    #cf img.top {
+                    animation-name: cfFadeInOut;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: infinite;
+                    animation-duration: 10s;
+                    animation-direction: alternate;
+                    animation-iteration-count: 1;
+                    }
+                    */
                 
                 .cf2 {
                     align-items: center;
