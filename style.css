@@ -107,7 +107,6 @@
                 
                 body {
                     line-height: 1;
-                    scroll-snap-type: y mandatory;
                 }
                 
                 ol,
@@ -137,20 +136,24 @@
                     --my-blue: #D5EDF6;
                     --my-pink: #EFDAF1;
                 }
-                /* My style*/
+                /*********************************************************/
+                /* My style */
+                /*define colors*/
+                
+                 :root {
+                    --my-blue: #D5EDF6;
+                    --my-pink: #EFDAF1;
+                }
                 
                 html {
                     height: 100vh;
-                    /* overflow: scroll;*/
-                    /*scroll-snap-type: y mandatory;*/
                 }
                 
                 body {
-                    /*font-family:'Montserrat', sans-serif;*/
-                    /*font-family: 'Alegreya Sans', sans-serif;*/
                     font-family: 'Nunito Sans', sans-serif;
                     height: 100vh;
                 }
+                /************************************************************/
                 /* Navbar*/
                 
                 .navbar-brand {
@@ -166,13 +169,10 @@
                 .navbar-brand:hover {
                     color: white;
                     box-shadow: inset 310px 0 0 0 black;
-                    /*cursor: default;*/
                 }
                 
                 .navbar {
                     font-family: 'Nunito Sans', sans-serif;
-                    /* font-family:'Montserrat', sans-serif;*/
-                    /*font-family: 'Alegreya Sans SC', sans-serif;*/
                     background-color: white !important;
                     text-transform: uppercase;
                 }
@@ -185,14 +185,11 @@
                     color: black;
                     border-top: 1px solid black !important;
                     border-bottom: 1px solid black !important;
-                    /*background-color:#D5EDF6;*/
-                    /*border-radius:5px;*/
                 }
                 
                 .nav-link {
                     transition: all 300ms ease-in-out;
                     border: 1px solid white;
-                    /*border-radius:5px;*/
                     margin: 3px;
                     padding-top: 5px;
                     padding-bottom: 5px;
@@ -204,29 +201,39 @@
                     border-top: 1px solid black;
                     border-left: 1px solid white;
                     border-right: 1px solid white;
-                    /*border-radius:5px;*/
                 }
                 
                 .active-dropdown {
                     color: black;
-                    background-color: #D5EDF6;
+                    background-color: #94D1E6;
                 }
                 
                 a.dropdown-item:focus {
                     color: black;
-                    background-color: #D5EDF6;
+                    background-color: #94D1E6;
+                }
+                
+                i.conticon {
+                    padding-right: 5px;
                 }
                 /****************************************************************/
                 /*Accueil*/
                 
                 .wrapper {
-                    /*font-family: 'Alegreya Sans SC', sans-serif;*/
-                    /*font-family: 'Montserrat', sans-serif;*/
                     font-family: 'Nunito Sans', sans-serif;
                     line-height: 1.5;
                     word-spacing: 4px;
                     letter-spacing: 1px;
                     height: calc(100% - 84px);
+                }
+                
+                .frontLink {
+                    color: white;
+                    text-decoration: none;
+                }
+                
+                .frontLink:hover {
+                    color: white;
                 }
                 
                 .fixed-bg {
@@ -264,6 +271,13 @@
                     background-position-y: 350px;
                 }
                 
+                .bg-1 h1 {
+                    letter-spacing: 1rem;
+                    font-weight: 900;
+                    color: #E63D3D;
+                    font-size: 1.5rem;
+                }
+                
                 .bg-2 {
                     background-image: url('Img/Organ1.jpg');
                     /*url('Img/AFFICHE_MISSION-ORGANE_A3_A_V4.jpg');*/
@@ -272,7 +286,7 @@
                 
                 .bg-3 {
                     /*background-image: url('Img/AFFICHE_ROUTINE_A3 - origin - police.jpg');
-                       background-position: center center;
+                    background-position: center center;
                     background-position-y: -900px;
                     background-repeat: repeat;*/
                     background-color: #f4941f;
@@ -303,47 +317,75 @@
                     display: table-cell;
                     vertical-align: middle;
                 }
-                
-                .frontLink {
-                    color: white;
-                    text-decoration: none;
-                }
-                
-                .frontLink:hover {
-                    color: white;
-                }
-                
-                .genre {
+                /*.genre {
                     text-align: left !important;
+                }*/
+                
+                .titreissue {
+                    width: 50%;
+                }
+                
+                .titreroutine {
+                    width: 25%;
+                }
+                
+                .titreorgane {
+                    width: 40%;
+                    padding-bottom: 1rem;
+                }
+                
+                .ptitreroutine {
+                    color: black;
+                }
+                
+                @media (max-width:992px) {
+                    .titreroutine {
+                        width: 40%;
+                    }
+                    .titreissue {
+                        width: 70%;
+                    }
+                    .titreorgane {
+                        width: 60%;
+                        padding-bottom: 1rem;
+                    }
                 }
                 /*****************************************************************/
                 /*Presentation*/
                 
-                .cvimg {
-                    width: 90%;
-                    height: auto;
-                    padding: 10px;
-                    padding-top: 20px;
-                    filter: grayscale(100%);
+                #cf {
+                    position: relative;
+                    top: -30vh;
+                    left: 0;
                 }
                 
-                .cvimg:hover {
-                    filter: hue-rotate(180deg);
-                    /*filter: sepia(60%);*/
+                #cf img {
+                    position: absolute;
+                    margin: auto;
+                    -webkit-transition: opacity 1s ease-in-out;
+                    -moz-transition: opacity 1s ease-in-out;
+                    -o-transition: opacity 1s ease-in-out;
+                    transition: opacity 1s ease-in-out;
+                    width: 100%;
+                    border: 5px black solid;
                 }
                 
-                .pres-h1 {
-                    font-size: 1.4rem;
-                    text-transform: uppercase;
-                    padding-bottom: 20px;
-                    padding-top: 20px;
+                #cf img.top:hover {
+                    opacity: 0;
                 }
                 
-                .pres-for {
-                    font-size: 1.4rem;
-                    text-transform: uppercase;
-                    padding-bottom: 20px;
-                    padding-top: 30px;
+                .cf2 {
+                    align-items: center;
+                    margin: auto;
+                }
+                
+                @media (max-width:992px) {}
+                
+                .pre-h1 {
+                    text-align: left;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    letter-spacing: 0.8rem;
                 }
                 
                 .pres-div {
@@ -351,129 +393,64 @@
                     padding-top: 4rem;
                 }
                 
-                @media screen and (max-width: 992px) {
-                    .pres-div {
-                        padding: 20px;
-                    }
-                    .pres-h1 {
-                        font-size: 1.3rem;
-                    }
-                    .pres-for {
-                        font-size: 1.3rem;
-                    }
-                }
-                
-                .job {
-                    background-color: transparent;
-                    padding: 0px 15px;
-                    width: 100%;
-                    max-width: 1000px;
-                    display: flex;
-                    flex-direction: row;
-                    text-align: center;
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-bottom: 0;
-                }
-                
-                .job-date {
-                    padding: 10px 10px;
-                    border-right: 1px solid lightgrey;
-                    border-bottom: 1px solid lightgrey;
-                    display: block;
-                    font-size: 1em;
-                    vertical-align: center;
-                    width: 20%;
-                }
-                
-                .job-item {
-                    padding: 0 35px;
-                    padding-bottom: 10px;
-                    padding-top: 10px;
-                    border-bottom: 1px solid lightgrey;
-                    flex-grow: 1;
-                    flex-basis: 0;
-                    min-width: 0;
-                }
-                
-                .job-header {
-                    font-size: 1em;
-                    padding: 5px 0;
-                    padding-top: 5px;
-                    text-align: left;
-                }
-                
-                .job-features {
-                    text-align: left;
-                    font-size: 1em;
-                }
-                
-                .job-features-item {
-                    font-size: 12px;
-                    line-height: 1.5;
-                    padding: 5px 0;
-                }
-                
-                @media (max-width:768px) {
-                    .job {
-                        flex-direction: column;
-                    }
-                    .job-date {
-                        border-right: none;
-                        border-bottom: 1px solid lightgrey;
-                        width: 100%;
-                    }
-                    .job-item {
-                        margin-bottom: 20px;
-                    }
-                    .degree:last-child {
-                        border-bottom: none;
-                    }
-                }
-                
-                .job a {
-                    color: black;
-                }
-                
-                .job a:hover {
-                    color: var(--color2);
-                }
-                
                 .pre-p {
                     text-align: justify;
                     padding-bottom: 0.5rem;
                 }
+                
+                @media screen and (max-width: 992px) {
+                    #cf {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                    }
+                    #cf img {
+                        position: relative;
+                        border: 0;
+                    }
+                    .pres-div {
+                        padding: 20px;
+                    }
+                }
                 /*************************************************************/
                 /*Issue de Secours*/
                 
-                .iss-head {
-                    padding-top: 20px;
-                    font-family: 'Allerta Stencil', sans-serif;
-                    text-align: center;
-                    font-size: 5rem;
-                    /*color: #2E6171; #606F7D;*/
-                    color: #F1F1F0;
-                    /*text-shadow: 1px 0px 4px #95CCDD, 2px 0px 4px #95CCDD, 3px 0px 4px #95CCDD, 2px 0px 3px #95CCDD, 2px 3px 15px #95CCDD, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #95CCDD, 40px 0vw 200px #95CCDD;*/
-                    /*text-shadow: 1px 0px 4px #ABC4CC, 2px 0px 4px #ABC4CC, 3px 0px 4px #ABC4CC, 2px 0px 3px #ABC4CC, 2px 3px 15px #ABC4CC, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #ABC4CC, 40px 0vw 200px #ABC4CC;*/
-                    text-shadow: 1px 0px 4px #606F7D, 2px 0px 4px #606F7D, 3px 0px 4px #606F7D, 2px 0px 3px #606F7D, 2px 3px 15px #606F7D, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #606F7D, 40px 0vw 200px #606F7D;
+                .i1 {
+                    min-height: 100vh;
+                    background-image: url("Img/issueback.png");
+                    background-position-y: -500px;
+                    padding: 0;
                 }
                 
-                .fullheight {
-                    height: 100vh;
+                .issue-titre {
+                    margin: auto;
+                    margin-top: 100px;
+                    width: 80%;
                 }
                 
-                .flicker-slow {
-                    animation: flicker 3s linear 5;
+                .issue-label {
+                    width: 90%;
+                    margin-bottom: 50px;
+                    margin-top: 50px;
                 }
                 
-                .flicker-fast {
-                    animation: flicker 1s linear 10;
+                .issue-pitch {
+                    background-color: transparent;
+                    color: #ebe8e5;
+                    width: 80%;
+                    padding: 2rem;
+                    margin: auto;
+                    text-align: justify;
                 }
                 
-                .subtitle-issue {
-                    text-align: center;
-                    padding: 20px;
-                    font-size: 1.2rem;
+                .i2 {
+                    min-height: 90vh;
+                    background-color: #ebe8e5;
+                    padding: 0;
+                }
+                
+                .i3 {
+                    min-height: 70vh;
                 }
                 
                 .issue-div {
@@ -482,13 +459,6 @@
                     padding-top: 50px;
                     padding-bottom: 20px;
                     text-align: justify;
-                }
-                
-                .issue-div1 {
-                    margin: 0;
-                    text-align: justify;
-                    color: black;
-                    padding-bottom: 2rem;
                 }
                 
                 .issue-h1 {
@@ -501,10 +471,95 @@
                     margin-bottom: 10px;
                 }
                 
-                .issue-h3 {
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                    font-size: 1.3em;
+                .buttonlink {
+                    color: black;
+                    text-decoration: none;
+                }
+                
+                .buttonlink:hover {
+                    color: black;
+                    text-decoration: none;
+                }
+                
+                .button-issue {
+                    background-color: #1d7a82;
+                    /*border: 1px solid #266DB6;*/
+                    box-sizing: border-box;
+                    color: #ebe8e5;
+                    font-size: 16px;
+                    /*font-weight: 700;*/
+                    line-height: 24px;
+                    padding: 16px 23px;
+                    position: relative;
+                    text-decoration: none;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+                }
+                
+                .button-issue:hover,
+                .button-issue:active {
+                    outline: 0;
+                }
+                
+                .button-issue:hover {
+                    background-color: #1d7a82;
+                    color: #ebe8e5;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+                
+                .issue-pp {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+                
+                .nocol {
+                    color: black;
+                }
+                
+                .nocol:hover {
+                    color: black;
+                }
+                
+                .i4 {
+                    min-height: 90vh;
+                    background-color: #475b66;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                .im {
+                    position: relative;
+                }
+                
+                .i5 {
+                    min-height: 90vh;
+                    background-color: #ebe8e5;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                .issue-div1 {
+                    margin: 0;
+                    text-align: justify;
+                    color: black;
+                    padding-bottom: 2rem;
+                }
+                
+                .subtitle {
+                    padding-top: 0.5rem;
+                    text-align: center;
+                    color: #ebe8e5;
+                }
+                
+                .imnew {
+                    padding: 2rem;
+                }
+                
+                .imnew1 {
+                    padding-top: 4rem;
+                    width: 60%;
                 }
                 
                 table {
@@ -516,38 +571,73 @@
                     padding: 2px;
                 }
                 
-                .pad1 {
-                    padding: 20px;
-                    /* position: absolute;*/
-                    /*font-family: 'IM Fell English SC', serif;*/
-                    font-size: 1em;
-                    min-height: 300px;
-                }
-                
                 @media (max-width:992px) {
-                    .pad1 {
-                        padding-left: 30px;
-                        padding-right: 30px;
-                    }
-                    .iss-head {
-                        font-size: 4rem;
-                    }
                     .issue-div {
-                        padding-top: 0;
-                        padding-bottom: 0;
+                        padding-left: 4rem;
+                        padding-right: 4rem;
                     }
                     .issue-h1 {
                         padding-top: 1rem;
                     }
                 }
-                
-                .subtitle {
-                    padding-top: 0.5rem;
-                    text-align: center;
-                    color: #ebe8e5;
-                }
                 /******************************************************************/
                 /* ROUTINE*/
+                
+                .pg1 {
+                    min-height: 100vh;
+                    background-color: #f4941f;
+                    padding: 0;
+                    border: 0;
+                    margin: 0;
+                }
+                
+                .headdiv {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .routine-title {
+                    width: 70%;
+                    height: auto;
+                    padding-bottom: 2rem;
+                    margin-top: 100px;
+                }
+                
+                .routine-head {
+                    width: 40%;
+                    height: auto;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    vertical-align: bottom;
+                }
+                
+                @media (max-width:992px) {
+                    .routine-head {
+                        width: 40%;
+                    }
+                    .routine-title {
+                        width: 50%;
+                        padding-bottom: 3rem;
+                    }
+                }
+                
+                @media (max-width:768px) {
+                    .routine-head {
+                        width: 50%;
+                    }
+                    .routine-title {
+                        width: 60%;
+                        padding-bottom: 7rem;
+                    }
+                }
+                
+                .pg0 {
+                    min-height: 90vh;
+                    background-color: rgb(244, 241, 241);
+                    padding: 0;
+                }
                 
                 .routine-div {
                     text-align: justify;
@@ -556,12 +646,64 @@
                     padding: 1rem;
                 }
                 
+                .routine-p {
+                    margin-bottom: 10px;
+                }
+                
                 .begin {
                     font-size: 2rem;
                 }
                 
-                .routine-p {
-                    margin-bottom: 10px;
+                .rout-center {
+                    text-align: center;
+                    padding: 20px;
+                }
+                
+                .button-routine {
+                    background-color: #f2bd7c;
+                    /*border: 1px solid #266DB6;*/
+                    border: 1px solid black;
+                    box-sizing: border-box;
+                    color: #00132C;
+                    font-size: 16px;
+                    /*font-weight: 700;*/
+                    line-height: 24px;
+                    padding: 16px 23px;
+                    position: relative;
+                    text-decoration: none;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+                }
+                
+                .button-routine:hover,
+                .button-routine:active {
+                    outline: 0;
+                }
+                
+                .button-routine:hover {
+                    background-color: #f4941f;
+                    cursor: pointer;
+                }
+                
+                .routine-pp {
+                    padding-top: 1rem;
+                }
+                
+                .pg2 {
+                    min-height: 90vh;
+                    background-color: #f4941f;
+                    padding: 0;
+                }
+                
+                .routine-members {
+                    padding: 1rem;
+                }
+                
+                @media (max-width:992px) {
+                    .tabmem {
+                        margin-left: 3rem;
+                    }
                 }
                 
                 .routine-h1 {
@@ -575,152 +717,17 @@
                     text-transform: uppercase;
                     padding-bottom: 0.5rem;
                 }
-                
-                .routine-members {
-                    padding: 1rem;
-                }
-                
-                @media (max-width:992px) {
-                    .tabmem {
-                        margin-left: 3rem;
-                    }
-                }
-                /******************************************************************/
-                /*Contact*/
-                
-                .cont-div {
-                    display: flex;
-                    justify-content: center;
-                    padding: 0.5rem;
-                    margin: 0.5rem;
-                    background-color: var(--my-blue);
-                    color: black;
-                }
-                
-                .cont-div-details {
-                    padding: 2rem;
-                }
-                
-                .ap {
-                    display: flex;
-                    justify-content: center;
-                    padding: 0.5rem;
-                    margin: 0.5rem;
-                    background-color: var(--my-blue);
-                    color: black;
-                    margin: auto;
-                }
-                
-                .ap:hover {
-                    background-color: var(--my-pink);
-                }
-                
-                .aplink {
-                    text-decoration: none;
-                    color: black;
-                }
-                
-                .aplink:hover {
-                    color: black;
-                }
-                
-                .circle-wrap {
-                    width: 50%;
-                    aspect-ratio: 1/1;
-                    background-color: var(--my-blue);
-                    border-radius: 50%;
-                    text-align: center;
-                    line-height: 0;
-                    position: relative;
-                    display: table;
-                    transition: all 0.2s 0.2s;
-                    margin: auto;
-                    margin-top: 5rem;
-                    margin-bottom: 5rem;
-                }
-                
-                .circle-wrap:hover {
-                    border-radius: 0;
-                    background-color: var(--my-pink);
-                }
-                
-                .circle-wrap div {
-                    display: table-cell;
-                    vertical-align: middle;
-                    width: 100%;
-                }
-                
-                .circle-wrap div span {
-                    display: block;
-                    margin: 2rem;
-                }
-                
-                .circle-wrap div span a {
-                    text-decoration: none;
-                    color: black;
-                }
-                
-                .cf-head {
-                    text-align: center;
-                    padding-bottom: 2rem;
-                    font-size: 1.5rem;
-                    color: black;
-                    font-weight: bold;
-                    letter-spacing: 0.5rem;
-                }
-                
-                .contact-form {
-                    background-color: transparent;
-                    margin: auto;
-                    margin-top: 5rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
-                    border-radius: 0%;
-                    max-width: 700px;
-                    display: flex;
-                    flex-direction: column;
-                }
-                
-                .mybtn {
-                    width: 30%;
-                    margin-top: 1rem;
-                    background-color: white;
-                    border: 0;
-                    color: black;
-                    border: 1px solid black;
-                }
-                
-                .mybtn:hover {
-                    background-color: grey;
-                    border: 1px solid grey;
-                }
-                
-                form {
-                    width: 100%;
-                    align-items: center;
-                }
-                
-                .spacer {
-                    margin-top: 4rem;
-                }
-                
-                @media (max-width:992px) {
-                    .circle-wrap {
-                        border-radius: 0;
-                        aspect-ratio: 3/1;
-                        margin-top: 2rem;
-                        margin-bottom: 2rem;
-                    }
-                    .circle-wrap div span {
-                        font-size: 1rem;
-                        margin: 2.5rem;
-                    }
-                    .spacer {
-                        margin-top: 1rem;
-                    }
-                }
                 /******************************************************************/
                 /*Guerisons*/
+                
+                .g1 {
+                    min-height: 100vh;
+                    padding-top: 84px;
+                }
+                
+                .pad {
+                    padding: 20px;
+                }
                 
                 .gue-h1 {
                     font-size: 2em;
@@ -729,60 +736,14 @@
                     text-transform: uppercase;
                 }
                 
-                .gue-center {
-                    text-align: center;
-                    padding: 20px;
-                }
-                
-                .red {
-                    color: red;
-                }
-                
-                .iconLink {
-                    color: black;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-                
-                i.grow {
-                    transition: all .2s ease-in-out;
-                }
-                
-                i.grow:hover {
-                    transform: scale(1.5);
-                }
-                
                 .gue-p {
                     text-align: justify;
                 }
                 
-                .gue-h2 {
+                .gue-center {
                     text-align: center;
-                    font-size: 1.1em;
-                    padding: 10px;
-                }
-                
-                .pad {
                     padding: 20px;
                 }
-                
-                .pad2 {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                }
-                
-                .imh {
-                    position: relative;
-                }
-                
-                .imgop {
-                    opacity: 0.2;
-                }
-                
-                i.conticon {
-                    padding-right: 5px;
-                }
-                /* CSS */
                 
                 .button-51 {
                     background-color: transparent;
@@ -835,161 +796,35 @@
                     }
                 }
                 
-                .buttonlink {
-                    color: black;
-                    text-decoration: none;
-                }
-                
-                .buttonlink:hover {
-                    color: black;
-                    text-decoration: none;
-                }
-                
-                .object-and-details1 img {
-                    display: inline-block;
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    overflow: visible;
-                }
-                
-                .nopad {
-                    padding: 0;
-                }
-                /* The typewriter cursor effect */
-                
-                @keyframes blink-caret {
-                    from,
-                    to {
-                        border-color: transparent
-                    }
-                    50% {
-                        border-color: orange
-                    }
-                }
-                
-                .ptype {
-                    font-size: 28px;
-                    font-weight: bold;
-                    width: 400px;
-                }
-                
-                .imageBox {
-                    position: relative;
-                    float: left;
-                }
-                
-                .imageBox .hoverImg {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    display: none;
-                }
-                
-                .imageBox:hover .hoverImg {
-                    display: block;
-                }
-                
-                .routine-title {
-                    width: 70%;
-                    height: auto;
-                    padding-bottom: 2rem;
-                    margin-top: 100px;
-                }
-                
-                .pg1 {
-                    min-height: 100vh;
-                    background-color: #f4941f;
-                    padding: 0;
-                    border: 0;
-                    margin: 0;
-                }
-                
-                .routine-head {
-                    width: 40%;
-                    height: auto;
-                    border: 0;
-                    margin: 0;
-                    padding: 0;
-                    vertical-align: bottom;
-                }
-                
-                .headdiv {
-                    border: 0;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-                .pg0 {
+                .g2 {
                     min-height: 90vh;
-                    background-color: rgb(244, 241, 241);
-                    padding: 0;
                 }
                 
-                @media (max-width:992px) {
-                    .routine-head {
-                        width: 40%;
-                    }
-                    .routine-title {
-                        width: 50%;
-                        padding-bottom: 3rem;
-                    }
+                .gue-h2 {
+                    text-align: center;
+                    font-size: 1.1em;
+                    padding: 10px;
                 }
                 
-                @media (max-width:768px) {
-                    .routine-head {
-                        width: 50%;
-                    }
-                    .routine-title {
-                        width: 60%;
-                        padding-bottom: 7rem;
-                    }
+                .red {
+                    color: red;
                 }
                 
-                .pg2 {
-                    min-height: 90vh;
-                    background-color: #f4941f;
-                    padding: 0;
-                }
-                
-                .button-routine {
-                    background-color: #f2bd7c;
-                    /*border: 1px solid #266DB6;*/
-                    border: 1px solid black;
-                    box-sizing: border-box;
-                    color: #00132C;
-                    font-size: 16px;
-                    /*font-weight: 700;*/
-                    line-height: 24px;
-                    padding: 16px 23px;
-                    position: relative;
-                    text-decoration: none;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    touch-action: manipulation;
-                }
-                
-                .button-routine:hover,
-                .button-routine:active {
-                    outline: 0;
-                }
-                
-                .button-routine:hover {
-                    background-color: #f4941f;
-                    cursor: pointer;
-                }
-                
-                .routine-pp {
-                    padding-top: 1rem;
-                }
-                
-                .nocol {
+                .iconLink {
                     color: black;
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
                 
-                .nocol:hover {
-                    color: black;
+                i.grow {
+                    transition: all .2s ease-in-out;
                 }
+                
+                i.grow:hover {
+                    transform: scale(1.5);
+                }
+                /*****************************************************************/
+                /*MissionOrgane*/
                 
                 .o1 {
                     min-height: 100vh;
@@ -1044,114 +879,74 @@
                     padding-bottom: 1rem;
                     padding-top: 2rem;
                 }
+                /******************************************************************/
+                /*Contact*/
                 
-                .g1 {
-                    min-height: 100vh;
-                    padding-top: 84px;
+                .backcont {
+                    margin-top: 84px;
+                    height: 100vh;
+                    background-size: cover;
                 }
                 
-                .g2 {
-                    min-height: 90vh;
-                }
-                
-                .i1 {
-                    min-height: 100vh;
-                    background-image: url("Img/issueback.png");
-                    background-position-y: -500px;
-                    padding: 0;
-                }
-                
-                .issue-pitch {
+                .contact-form {
                     background-color: transparent;
-                    color: #ebe8e5;
-                    width: 80%;
-                    padding: 2rem;
                     margin: auto;
-                    text-align: justify;
+                    margin-top: 5rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                    border-radius: 0%;
+                    max-width: 700px;
+                    display: flex;
+                    flex-direction: column;
                 }
                 
-                .issue-titre {
-                    margin: auto;
-                    margin-top: 100px;
+                .cf-head {
+                    text-align: center;
+                    padding-bottom: 2rem;
+                    font-size: 1.5rem;
+                    color: black;
+                    font-weight: bold;
+                    letter-spacing: 0.5rem;
+                }
+                
+                .form-group {
+                    padding-bottom: 0.5rem;
+                }
+                
+                form {
+                    width: 100%;
+                    align-items: center;
+                }
+                
+                .mybtn {
+                    width: 30%;
+                    margin-top: 1rem;
+                    background-color: white;
+                    border: 0;
+                    color: black;
+                    border: 1px solid black;
+                }
+                
+                .mybtn:hover {
+                    background-color: grey;
+                    border: 1px solid grey;
+                }
+                
+                .cop {
                     width: 80%;
+                    padding-top: 4rem;
                 }
                 
-                .i2 {
-                    min-height: 90vh;
-                    background-color: #ebe8e5;
-                    padding: 0;
-                }
-                
-                .i3 {
-                    min-height: 70vh;
-                }
-                
-                .issue-pp {
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
+                .spacer {
+                    margin-top: 4rem;
                 }
                 
                 @media (max-width:992px) {
-                    .issue-div {
-                        padding-left: 4rem;
-                        padding-right: 4rem;
+                    .spacer {
+                        margin-top: 1rem;
                     }
                 }
-                
-                .i4 {
-                    min-height: 90vh;
-                    background-color: #475b66;
-                    padding: 0;
-                    margin: 0;
-                }
-                
-                .im {
-                    position: relative;
-                }
-                
-                .i5 {
-                    min-height: 90vh;
-                    background-color: #ebe8e5;
-                    padding: 0;
-                    margin: 0;
-                }
-                
-                .imnew {
-                    padding: 2rem;
-                }
-                
-                .imnew1 {
-                    padding-top: 4rem;
-                    width: 60%;
-                }
-                
-                #cf {
-                    position: relative;
-                    top: -30vh;
-                    left: 0;
-                }
-                
-                #cf img {
-                    position: absolute;
-                    margin: auto;
-                    -webkit-transition: opacity 1s ease-in-out;
-                    -moz-transition: opacity 1s ease-in-out;
-                    -o-transition: opacity 1s ease-in-out;
-                    transition: opacity 1s ease-in-out;
-                    width: 100%;
-                    border: 5px black solid;
-                }
-                
-                #cf img.top:hover {
-                    opacity: 0;
-                }
-                
-                .pre-h1 {
-                    text-align: left;
-                    font-weight: bold;
-                    font-size: 2rem;
-                    letter-spacing: 0.8rem;
-                }
+                /******************************************************************/
                 /* automatic switch of images 
                     @keyframes cfFadeInOut {
                     0% {
@@ -1177,93 +972,3 @@
                     animation-iteration-count: 1;
                     }
                     */
-                
-                .cf2 {
-                    align-items: center;
-                    margin: auto;
-                }
-                
-                @media (max-width:992px) {
-                    #cf {
-                        position: relative;
-                        left: 0;
-                        top: 0;
-                    }
-                    #cf img {
-                        position: relative;
-                        border: 0;
-                    }
-                }
-                
-                .button-issue {
-                    background-color: #1d7a82;
-                    /*border: 1px solid #266DB6;*/
-                    box-sizing: border-box;
-                    color: #ebe8e5;
-                    font-size: 16px;
-                    /*font-weight: 700;*/
-                    line-height: 24px;
-                    padding: 16px 23px;
-                    position: relative;
-                    text-decoration: none;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    touch-action: manipulation;
-                }
-                
-                .button-issue:hover,
-                .button-issue:active {
-                    outline: 0;
-                }
-                
-                .button-issue:hover {
-                    background-color: #1d7a82;
-                    color: #ebe8e5;
-                    cursor: pointer;
-                    font-size: 20px;
-                }
-                
-                .form-group {
-                    padding-bottom: 0.5rem;
-                }
-                
-                .backcont {
-                    margin-top: 84px;
-                    height: 100vh;
-                    background-size: cover;
-                }
-                
-                .cop {
-                    width: 80%;
-                    padding-top: 4rem;
-                }
-                
-                .titreissue {
-                    width: 50%;
-                }
-                
-                .titreroutine {
-                    width: 25%;
-                }
-                
-                .titreorgane {
-                    width: 40%;
-                    padding-bottom: 1rem;
-                }
-                
-                .ptitreroutine {
-                    color: black;
-                }
-                
-                @media (max-width:992px) {
-                    .titreroutine {
-                        width: 40%;
-                    }
-                    .titreissue {
-                        width: 70%;
-                    }
-                    .titreorgane {
-                        width: 60%;
-                        padding-bottom: 1rem;
-                    }
-                }
