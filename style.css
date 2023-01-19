@@ -264,11 +264,12 @@
                 }
                 
                 .bg-1 {
-                    background-image: url('Img/GUE.jpg');
+                    background-image: url('Img/Accueil/GUE.jpg');
                     background-size: contain;
                     background-repeat: repeat;
                     background-position: 25% center;
                     background-position-y: 350px;
+                    transition-duration: 1s;
                 }
                 
                 .bg-1 h1 {
@@ -280,19 +281,22 @@
                 }
                 
                 .bg-2 {
-                    background-image: url('Img/Organ1.jpg');
+                    background-image: url('Img/Accueil/organ.jpg');
                     /*url('Img/AFFICHE_MISSION-ORGANE_A3_A_V4.jpg');*/
                     background-position: bottom center;
+                    transition-duration: 1s;
                 }
                 
                 .bg-3 {
-                    background-image: url('Img/RoutBack.jpg');
+                    background-image: url('Img/Accueil/routine.jpg');
                     background-position: bottom;
+                    transition-duration: 1s;
                     /*background-color: #f4941f;*/
                 }
                 
                 .bg-4 {
-                    background-image: url('Img/IssueBack5.png');
+                    background-image: url('Img/Accueil/issue.jpg');
+                    transition-duration: 1s;
                 }
                 
                 .fixed-bg h1 {
@@ -351,6 +355,10 @@
                 }
                 /*****************************************************************/
                 /*Presentation*/
+                
+                .navbar-padding {
+                    padding-top: 84px;
+                }
                 
                 #cf {
                     position: relative;
@@ -416,7 +424,7 @@
                 
                 .i1 {
                     min-height: 100vh;
-                    background-image: url("Img/issueback.png");
+                    background-image: url("Img/Issue/issueback.jpg");
                     background-position-y: -500px;
                     padding: 0;
                 }
@@ -548,6 +556,7 @@
                 
                 .subtitle {
                     padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
                     text-align: center;
                     color: #ebe8e5;
                 }
@@ -827,7 +836,7 @@
                 
                 .o1 {
                     min-height: 100vh;
-                    background-image: url("Img/mission3.png");
+                    background-image: url("Img/Organe/mission3.jpg");
                     background-position-y: -500px;
                     padding: 0;
                 }
@@ -856,7 +865,7 @@
                 
                 .o2::before {
                     content: "";
-                    background-image: url("Img/mission2.png");
+                    background-image: url("Img/Organe/mission2.png");
                     background-repeat: repeat;
                     background-size: 33%;
                     position: absolute;
