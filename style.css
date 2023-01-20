@@ -1085,7 +1085,6 @@
                 
                 .mp {
                     width: 60%;
-                    padding-bottom: 1rem;
                 }
                 
                 .equipe {
@@ -1096,6 +1095,7 @@
                 @media (max-width:992px) {
                     .mp {
                         width: 40%;
+                        padding-bottom: 1rem;
                     }
                     .mission-div {
                         padding-left: 4rem;
